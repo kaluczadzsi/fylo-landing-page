@@ -11,8 +11,41 @@ body {
 }
 
 .container {
-  width: 20rem;
+  max-width: 20rem;
   margin: 0 auto;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact input {
+  border: 1px solid hsl(243, 87%, 12%);
+}
+.contact input::placeholder {
+  font-size: 14px;
+  color: hsl(0, 0%, 75%);
+}
+.contact input:focus {
+  outline: none;
+}
+.contact input,
+.contact a {
+  padding: 0.8rem 1.6rem;
+  border-radius: 3px;
+}
+.contact a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  background-color: hsl(224, 93%, 58%);
+  border: none;
+  transition: background 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.contact a:hover {
+  background-color: rgba(48, 101, 248, 0.8);
 }
 
 img {
@@ -43,6 +76,9 @@ nav > .container .nav-links a {
   font-size: 14px;
 }
 
+main {
+  margin-bottom: 5rem;
+}
 main .img-container {
   padding: 3.5rem 0;
 }
@@ -63,35 +99,158 @@ main .text-container p {
   color: hsl(243, 87%, 12%);
   line-height: 1.5;
 }
-main .text-container .contact {
+
+section.info {
+  background-color: #f8f8fe;
+  padding-bottom: 6rem;
+}
+section.info .img-container img {
+  padding: 4rem 0 6rem;
+}
+section.info .text-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
-main .text-container .contact input {
-  border: 1px solid hsl(243, 87%, 12%);
+section.info .text-container h2 {
+  color: hsl(243, 87%, 12%);
+  text-align: center;
+  font-size: 1.1rem;
 }
-main .text-container .contact input::placeholder {
-  font-size: 14px;
-  color: hsl(0, 0%, 75%);
+section.info .text-container > p {
+  color: hsl(238, 22%, 44%);
+  line-height: 1.5;
+  font-size: 0.98rem;
 }
-main .text-container .contact input:focus {
-  outline: none;
+section.info .text-container .info-link {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  gap: 0.5rem;
+  transition: color 0.3s;
+  margin-bottom: 1rem;
 }
-main .text-container .contact input,
-main .text-container .contact a {
-  padding: 0.8rem 1.6rem;
-  border-radius: 3px;
-}
-main .text-container .contact a {
-  font-weight: 600;
+section.info .text-container .info-link a {
+  color: hsl(170, 45%, 43%);
   text-decoration: none;
-  color: #fff;
-  background-color: hsl(224, 93%, 58%);
-  border: none;
-  transition: background 0.3s;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
-main .text-container .contact a:hover {
-  background-color: rgba(48, 101, 248, 0.8);
+section.info .text-container .info-link a:hover {
+  color: rgba(60, 159, 143, 0.8);
+}
+section.info .text-container .info-link img {
+  width: 25px;
+}
+section.info article {
+  color: hsl(243, 87%, 12%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 2rem;
+  background-color: #fff;
+}
+section.info article > img {
+  width: 15px;
+  margin-bottom: 5px;
+}
+section.info article > img + p {
+  line-height: 1.5;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+section.info article .profile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+section.info article .profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+section.info article .profile .profile-name {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+section.info article .profile .profile-name + p {
+  font-size: 12px;
+}
+
+section.sign-up {
+  padding: 4rem 0;
+  color: #fff;
+  text-align: center;
+  background-color: hsl(238, 22%, 44%);
+}
+section.sign-up > .container {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+section.sign-up > .container p {
+  line-height: 1.5;
+}
+section.sign-up .contact {
+  width: 80%;
+  margin: 0 auto;
+}
+section.sign-up .contact a {
+  font-size: 14px;
+}
+
+footer {
+  background-color: hsl(243, 87%, 12%);
+  padding: 4rem 0;
+  color: #fff;
+}
+footer .links a:hover,
+footer i:hover {
+  color: hsl(224, 93%, 58%);
+}
+footer .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-bottom: 4rem;
+}
+footer .contact-info .logo {
+  margin-bottom: 1rem;
+  width: 12rem;
+}
+footer .contact-info .phone,
+footer .contact-info .email {
+  display: flex;
+  gap: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+footer .contact-info .phone img,
+footer .contact-info .email img {
+  width: 25px;
+}
+footer .links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+footer .links a {
+  color: inherit;
+  text-decoration: none;
+}
+footer .links-col-1, footer .links-col-2 {
+  margin-bottom: 4rem;
+}
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+footer .social i {
+  cursor: pointer;
+  font-size: 30px;
 }/*# sourceMappingURL=style.css.map */
