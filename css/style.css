@@ -10,6 +10,10 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+.curve-desktop {
+  display: none;
+}
+
 .container {
   max-width: 20rem;
   margin: 0 auto;
@@ -192,6 +196,7 @@ section.sign-up > .container {
   flex-direction: column;
 }
 section.sign-up > .container p {
+  margin-top: 1rem;
   line-height: 1.5;
 }
 section.sign-up .contact {
@@ -253,4 +258,82 @@ footer .social {
 footer .social i {
   cursor: pointer;
   font-size: 30px;
+}
+
+@media (min-width: 700px) {
+  html {
+    font-size: 80%;
+  }
+  .container {
+    max-width: 90%;
+  }
+  .curve-mobile {
+    display: none;
+  }
+  .curve-desktop {
+    display: block;
+  }
+  main .container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main .container .img-container {
+    order: 1;
+  }
+  main .container .img-container img {
+    max-width: 30rem;
+  }
+  main .container .text-container {
+    max-width: 80%;
+  }
+  main .container .text-container .contact {
+    justify-content: center;
+    flex-direction: row;
+  }
+  section.info .container {
+    display: grid;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  section.info .container .img-container {
+    order: 1;
+    max-width: 90%;
+  }
+  section.info .container .text-container {
+    text-align: left;
+  }
+  section.info .container .text-container h2 {
+    font-size: 1.6rem;
+  }
+  section.info .container .text-container .info-link {
+    margin-right: auto;
+  }
+  section.info .container .text-container article {
+    max-width: 80%;
+  }
+  section.info .container .text-container article p {
+    font-size: 10px;
+  }
+  section.sign-up .container {
+    flex-direction: row;
+  }
+  section.sign-up .container > div {
+    text-align: left;
+  }
+  footer {
+    padding-bottom: 0;
+  }
+  footer .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
 }/*# sourceMappingURL=style.css.map */
